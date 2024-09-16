@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".app.user.activitys.AddressActivity">
+
+    <include
+        android:id="@+id/toolbar_lay" layout="@layout/tool_bar_no_round" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/toolbar_lay"
+        android:layout_above="@id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlUseCurrentLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginTop="@dimen/spacing_standard_new"
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:background="@drawable/bg_ractangal"
+                android:backgroundTint="@color/editText_background"
+                android:padding="@dimen/spacing_middle">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/ic_my_location"
+                    android:drawablePadding="@dimen/spacing_standard"
+                    android:drawableTint="@color/radiobuttonTint"
+                    android:gravity="center"
+                    android:text="استخدام العنوان الحالي"
+                    android:textColor="@color/radiobuttonTint"
+                    android:textSize="@dimen/font_size_medium"
+                    tools:ignore="MissingPrefix" />
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_marginEnd="@dimen/spacing_control"
+                    android:layout_weight="1"
+                    android:hint="المنطقة">
+
+                    <EditText
+                        android:id="@+id/edtStreet"
+                        android:inputType="text"
+                        android:maxEms="10"
+                        android:maxLength="10"
+                        style="@style/TextInputEditTextStyle" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutStyle"
+                    android:layout_marginStart="@dimen/spacing_control"
+                    android:layout_weight="1"
+                    android:hint="المدينة ">
+
+                    <EditText
+                        android:id="@+id/edtCity"
+                        style="@style/TextInputEditTextStyle" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:hint="العنوان بشكل كامل">
+
+                <EditText
+                    android:id="@+id/edtFullAddress"
+                    style="@style/TextInputEditTextStyle"
+                    android:singleLine="false"
+                    android:gravity="top"
+                    android:lines="2" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:hint="رقم الهاتف">
+
+                <EditText
+                    android:id="@+id/edtMobileNo"
+                    style="@style/TextInputEditTextStyle"
+                    android:inputType="number"
+                    android:gravity="top"
+                    android:maxEms="10"
+                    android:maxLength="10"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/MaterialButtonStyle.Filled"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:text="حفظ العنوان"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/layout_ads" />
+
+    </LinearLayout>
+
+</RelativeLayout>

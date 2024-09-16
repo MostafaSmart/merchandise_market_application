@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layoutDirection="rtl"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.worker.activitys.GetWorkActivity">
+
+    <include
+        android:id="@+id/toolbar_lay"
+        layout="@layout/toolbar" />
+    <include
+        android:id="@+id/toolbar_lay"
+        layout="@layout/toolbar_tow" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="@dimen/_350sdp"
+        android:padding="@dimen/_20sdp"
+        android:id="@+id/card1_"
+
+        android:layout_below="@id/toolbar_lay"
+        android:layout_margin="@dimen/spacing_standard_new"
+        android:orientation="vertical"
+
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/spacing_standard"
+        tools:ignore="MissingPrefix ,UnusedAttribute"
+        android:paddingBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/liContenr1"
+
+
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/start_1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="وضع "
+
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/font_size_xxlarge"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="البائع"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/font_size_xxlarge"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="@dimen/_200sdp"
+                    android:src="@drawable/splash_img"
+                    android:layout_height="@dimen/_200sdp">
+
+                </ImageView>
+                <TextView
+                    android:textSize="@dimen/font_size_medium"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/spacing_medium"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/spacing_small"
+                    android:layout_width="wrap_content"
+                    android:text="يمكنك الان ايصال منتجاتك الى شريحة اكبر من الناس \nمن خلال عرضها على متجر "
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/spacing_standard_new"
+                    android:background="@color/view_color" />
+
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:text="الموافقة على الشروط والاحكمام"
+                    android:id="@+id/chick_ok"
+                    android:textColor="@color/liteBlack2"
+                    android:layout_margin="@dimen/spacing_small"
+                    android:layout_height="wrap_content">
+
+                </CheckBox>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/personal_info"
+
+                android:visibility="gone"
+                android:layout_height="match_parent">
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="البيانات "
+
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/font_size_xxlarge"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="الشخصية"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/font_size_xxlarge"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/spacing_xxlarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/edtFirstName"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_standard"
+                        android:layout_marginEnd="@dimen/spacing_standard"
+                        android:inputType="textEmailAddress"
+                        android:hint="الاسم "
+                        android:autofillHints="الاسم "
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        />
+                    <EditText
+                        android:id="@+id/edtLastName"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_control"
+                        android:layout_marginEnd="@dimen/spacing_standard"
+                        android:inputType="textEmailAddress"
+                        android:hint="اللقب"
+                        android:autofillHints="اللقب"
+                        android:layout_weight="1"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/edtPhone"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard"
+                    android:layout_marginTop="@dimen/spacing_standard_new"
+                    android:layout_marginEnd="@dimen/spacing_standard"
+                    android:inputType="phone"
+                    android:hint="هاتف العمل"
+                    android:autofillHints="هاتف العمل"
+                    android:singleLine="true" />
+
+
+
+                <LinearLayout
+                   android:layout_marginTop="@dimen/spacing_standard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/edtStreet"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_standard"
+                        android:layout_marginEnd="@dimen/spacing_standard"
+                        android:inputType="textEmailAddress"
+                        android:hint="المنطقة "
+                        android:autofillHints="المنطقة "
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        />
+                    <EditText
+                        android:id="@+id/edtCity"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_control"
+                        android:layout_marginEnd="@dimen/spacing_standard"
+                        android:inputType="textEmailAddress"
+                        android:hint="المدينة /المحافظة"
+                        android:autofillHints="المدينة /المحافظة"
+                        android:layout_weight="1"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/edtAdress"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard"
+                    android:layout_marginTop="@dimen/spacing_standard_new"
+                    android:layout_marginEnd="@dimen/spacing_standard"
+                    android:inputType="text"
+                    android:hint="العنوان بشكل كامل"
+                    android:autofillHints="العنوان"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/work_info"
+
+                android:visibility="gone"
+                android:layout_height="match_parent">
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="بيانات "
+
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/font_size_xxlarge"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="العمل"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/font_size_xxlarge"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="ينتمي نشاطك الى قسم :"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/spacing_xxlarge"
+                    android:layout_marginStart="@dimen/spacing_standard"
+
+                    android:layout_marginEnd="@dimen/spacing_standard"
+                    android:layout_height="wrap_content"/>
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/listMainSetctions"
+                    app:singleSelection="true"
+                    android:theme="@style/AppThemeMaterial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:theme="@style/AppThemeMaterial"
+                    android:layout_margin="@dimen/spacing_standard"
+                    android:layout_height="1dp">
+
+                </View>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:id="@+id/listSubSections"
+                    android:theme="@style/AppThemeMaterial"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <EditText
+                    android:id="@+id/edtSection"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard"
+                    android:layout_marginTop="@dimen/spacing_standard_new"
+                    android:visibility="gone"
+                    android:layout_marginEnd="@dimen/spacing_standard"
+                    android:inputType="text"
+                    android:hint="ادخل القسم الذي ينتمي اليه نشاطك"
+                    android:autofillHints="ادخل القسم الذي ينتمي اليه نشاطك"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/work_info2"
+
+                android:visibility="gone"
+                android:layout_height="match_parent">
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="بيانات "
+
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/font_size_xxlarge"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="العمل"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/font_size_xxlarge"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="نبذة عن نشاطك :"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/spacing_xxlarge"
+                    android:layout_marginStart="@dimen/spacing_standard"
+
+                    android:layout_marginEnd="@dimen/spacing_standard"
+                    android:layout_height="wrap_content"/>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutStyle"
+                    android:hint="وصف نشاطك التجاري">
+
+                    <EditText
+                        android:id="@+id/edtDescraop"
+                        style="@style/TextInputEditTextStyle"
+                        android:gravity="top"
+                        android:lines="2"
+                        android:inputType="textMultiLine"
+                        android:hint=""
+                        android:autofillHints="وصف نشاطك التجاري"
+                        android:singleLine="false"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    android:id="@+id/prog_uu"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard"
+                    style="@style/MaterialButtonStyle.Filled"
+
+                    android:id="@+id/btn_finsh"
+                    android:layout_marginTop="@dimen/spacing_xxxlarge"
+                    app:cornerRadius="@dimen/spacing_standard"
+                    android:layout_marginEnd="@dimen/spacing_standard"
+                    android:shadowColor="@color/colorPrimary"
+                    android:layout_below="@+id/card1_"
+                    android:text="اتمام"
+
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/work_cmop"
+
+                android:visibility="gone"
+                android:layout_height="match_parent">
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="بيانات "
+
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/font_size_xxlarge"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="العمل"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/font_size_xxlarge"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="بعد اتمامك للتسجيل سيتم مراجعة بياناتك بعدها سيتم تفعيل عضويتك وتمكينك من عرض منتجاتك في المتجر"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/spacing_xxlarge"
+                    android:layout_marginStart="@dimen/spacing_standard"
+
+                    android:layout_marginEnd="@dimen/spacing_standard"
+                    android:layout_height="wrap_content"/>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="ارفق صور لبعض الاعمال التي تنوي عرضها  :"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/spacing_xxlarge"
+                    android:layout_marginStart="@dimen/spacing_standard"
+
+                    android:layout_marginEnd="@dimen/spacing_standard"
+                    android:layout_height="wrap_content"/>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard"
+                    style="@style/MaterialButtonStyle.Filled"
+
+                    android:id="@+id/btn_addImage"
+                    app:cornerRadius="@dimen/spacing_standard"
+                    android:layout_marginEnd="@dimen/spacing_standard"
+                    android:shadowColor="@color/colorPrimary"
+                    android:layout_below="@+id/card1_"
+                    android:text="اختيار صور"
+
+                    />
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    android:id="@+id/prog_uu2"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_standard"
+                    style="@style/MaterialButtonStyle.Filled"
+
+                    android:id="@+id/btn_finshAll"
+                    app:cornerRadius="@dimen/spacing_standard"
+                    android:visibility="invisible"
+                    android:layout_marginEnd="@dimen/spacing_standard"
+                    android:shadowColor="@color/colorPrimary"
+                    android:layout_below="@+id/card1_"
+                    android:text="اكمال"
+
+                    />
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginEnd="@dimen/spacing_standard"
+        android:shadowColor="@color/colorPrimary"
+        android:layout_marginStart="@dimen/spacing_standard"
+        android:layout_below="@+id/card1_"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_standard"
+            style="@style/MaterialButtonStyle.Filled"
+            android:layout_marginEnd="@dimen/spacing_standard"
+            android:layout_alignParentStart="true"
+            android:textSize="@dimen/font_size_small"
+
+            android:id="@+id/btn_contnyo_work"
+
+            app:cornerRadius="@dimen/spacing_standard"
+
+            android:shadowColor="@color/colorPrimary"
+
+            android:text="التالي"
+
+            />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_standard"
+            style="@style/MaterialButtonStyle.StrokedRed"
+            android:id="@+id/btn_back_work"
+            app:cornerRadius="@dimen/spacing_standard"
+
+            android:shadowColor="@color/liteBlack2"
+
+
+            android:layout_marginEnd="@dimen/spacing_standard"
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/font_size_small"
+            android:text="السابق"
+
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_standard"
+            style="@style/MaterialButtonStyle.StrokedRed"
+            android:id="@+id/btn_claseAll"
+            app:cornerRadius="@dimen/spacing_standard"
+
+            android:visibility="gone"
+            android:shadowColor="@color/liteBlack2"
+
+
+            android:layout_marginEnd="@dimen/spacing_standard"
+            android:layout_alignParentEnd="true"
+            android:textSize="@dimen/font_size_small"
+            android:text="التراجع"
+
+            />
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

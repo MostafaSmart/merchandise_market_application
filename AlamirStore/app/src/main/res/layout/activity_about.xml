@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="rtl"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/btn_back_black"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back_abut"
+                android:layout_width="wrap_content"
+                android:src="@drawable/back_icon"
+                android:layout_height="wrap_content">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="عن المطور"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:id="@+id/about_tital"
+                android:paddingTop="16dp"
+                android:paddingStart="16dp"
+                android:paddingBottom="16dp"
+
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:id="@+id/countener_grafty"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:id="@+id/siast_alkhososiah_countener"
+
+                android:padding="16dp"
+                android:background="@drawable/backgroun1"
+                android:layout_height="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="سياسة الخصوصية"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:text="شكرًا لاستخدام تطبيقنا.\n نحن نحرص على حماية خصوصية المستخدمين ونهتم بالمعلومات التي نجمعها ونستخدمها. يرجى قراءة سياسة الخصوصية التالية لفهم كيفية جمع واستخدام ومشاركة المعلومات الشخصية في تطبيقنا."
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:text="اولاً : المعلومات التي يحصل عليها متجر الامير يحتفظ بها في قواعد بياناتة\n المعلومات الشخصية الخاصة بالمستخدم كالاسم والعمر والبريد الالكتروني ورقم الهاتف وقد نقر بإسمك وعنوانك الى طرف ثالث بغية تسليمك طلبية شرائك(شركة التوصيل)\n قد يتم التواصل معك على رقم هاتفك لإعلامك بأ] تحديث يتعلق بحالة طلبيتك\n ثانياً : قد نستخدم المعلومات التي نجمعها لإجراء تحليلات ذات صلة بخدمة العملاء , ونقوم بتدريب موظفينا في خدمة العملاء , وتوفير الدعم المناسب للعملاء"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:text="ثالثاً : الامان\n نحن نتخذ إجراءات أمنية لحماية المعلومات الشخصية المجمعة من خلال تطبيقنا. نحن نستخدم إجراءات تقنية وإدارية للحفاظ على سرية المعلومات وحمايتها من الوصول غير المصرح به، والاستخدام غير المشروع، والتغيير غير المصرح به، والإفصاح غير المصرح به."
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:text="رابعاً: قد نقوم بتحديث سياسة الخصوصية هذه بين الحين والآخر. سنقوم بنشر أي تغييرات على هذه الصفحة وسنعلم المستخدمين بالتغييرات الجوهرية إذا كانت لها تأثير على الحقوق الشخصية. يُنصح بمراجعة سياسة الخصوصية بشكل دوري للبقاء على اطلاع بأي تحديثات."
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:text="اعلان موافقة العميل \n اوافق طوعاً وبشكل صريح على جمع بياناتي ومشاركتها واستخدامها فب الاجراءات و الاحتفاظ بها وفقاً للطريقة المنصوص عليها كما ورد أعلاه"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:id="@+id/about_contener"
+            android:gravity="center_vertical"
+            android:background="@drawable/backgroun1"
+            android:layout_height="0dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="SMART TECH"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="نقدم معظم الخدمات البرمجية\n1.تطوير تطبيقات الموبايل \n 2.تطوير مواقع الويب وتطبيقات الويب \n3. البرامج الادارية والمحاسبية "
+                android:textSize="15sp"
+                android:textStyle="bold"
+
+                android:padding="16dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:text="والعديد من الخدمات البرمجية والتقنية "
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="للتواصل"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+                <ImageView
+
+                    android:id="@+id/contact_whtaspp"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/whatsapp_icon_2_36x36"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/contact_instagram"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/instagram_icon_36x36"
+                    android:layout_marginStart="16dp"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+
+            </LinearLayout>
+            <TextView
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:text="BY : Mostafa Ameen"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:id="@+id/contenr_store"
+            android:background="@drawable/backgroun1"
+            android:layout_height="0dp">
+            <LinearLayout
+                android:orientation="vertical"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:src="@drawable/logo"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:layout_height="100dp">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:text="متجر الامير"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:layout_margin="16dp"
+                    android:layout_width="wrap_content"
+                    android:text="يقدم المتجر مجموعة متنوعة من المنتجات والخدمات التي تلبي احتياجات الفنانين والحرفيين. تتضمن المنتجات المتوفرة في المتجر:
+"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="1. منتجات الريزن: يوفر المتجر تشكيلة واسعة من منتجات الريزن، بما في ذلك المواد اللاصقة والقوالب والألوان التي تستخدم في صنع القطع الفنية الرائعة."
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_margin="16dp"
+                    android:textStyle="bold"
+                    android:text="2. مستلزمات الكونكرت: يتوفر لدى المتجر مجموعة متنوعة من مستلزمات الكونكرت، بما في ذلك المواد الخام والأدوات والاكسسوارات"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_margin="16dp"
+                    android:textStyle="bold"
+                    android:text="منتجات الشمع: يتوفر في المتجر مجموعة متنوعة من المنتجات الشمعية، بما في ذلك الشموع الخام وأدوات النحت والألوان"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_margin="16dp"
+                    android:textStyle="bold"
+                    android:text="مستلزمات التطريز: يهتم المتجر بمحبي التطريز ويوفر مستلزمات متنوعة لهم، بما في ذلك الخيوط والإبر والأقمشة المخصصة للتطريز."
+                    android:layout_height="wrap_content">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_margin="16dp"
+                    android:textStyle="bold"
+                    android:text="قسم الطابعات ومستلزماتها: يتوفر قسم مخصص في المتجر للطابعات ومستلزماتها، بما في ذلك الأوراق والفينيل وغيرها"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btn_back_black"
+                    android:text="الانتقال الى Google Maps"
+                    android:paddingStart="16dp"
+                    android:drawablePadding="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="4dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:id="@+id/go_googleMaps"
+                    android:paddingBottom="4dp"
+                    android:drawableStart="@drawable/gps_icon"
+                    android:layout_height="wrap_content">
+
+                </Button>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

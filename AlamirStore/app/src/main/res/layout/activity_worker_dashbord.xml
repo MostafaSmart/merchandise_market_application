@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/rlContent"
+    android:layoutDirection="rtl"
+    tools:context=".app.worker.activitys.WorkerDashbordActivity"
+    >
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:id="@+id/prog_acount"
+        android:layout_height="wrap_content">
+
+    </ProgressBar>
+
+    <include
+        android:id="@+id/toolbar_lay"
+        layout="@layout/toolbar" />
+    <include
+        android:id="@+id/toolbar_lay"
+        layout="@layout/toolbar_tow" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_lay"
+        android:clipToPadding="false"
+
+        android:overScrollMode="never"
+        android:paddingBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:scaleType="centerCrop"
+
+                android:id="@+id/profile_image"
+                android:src="@drawable/ic_walk"
+                app:civ_border_color="@color/view_color"
+                app:civ_border_width="4dp"/>
+
+
+
+            <TextView
+                android:id="@+id/txtDisplayName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="الاسم الكامل"
+                android:fontFamily="@font/cairo"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/font_size_large" />
+
+
+
+
+
+            <TextView
+                android:id="@+id/tvProdacts"
+                style="@style/AccountLabel"
+                android:text="المنتجات" />
+
+
+            <TextView
+                android:id="@+id/tvMyPage"
+                style="@style/AccountLabel"
+                android:text="صفحتي" />
+
+            <TextView
+                android:id="@+id/tvSelles"
+                style="@style/AccountLabel"
+                android:text="المبيعات" />
+
+            <TextView
+                android:id="@+id/tvRating"
+                style="@style/AccountLabel"
+                android:text="التقييمات" />
+            <TextView
+                android:id="@+id/tvInfo"
+                style="@style/AccountLabel"
+                android:text="البيانات " />
+            <TextView
+                android:id="@+id/tvHelpCenter"
+                style="@style/AccountLabel"
+                android:text="مركز المساعدة" />
+
+
+
+            <TextView
+                android:id="@+id/tvWishlist"
+                style="@style/AccountLabel"
+                android:visibility="gone"
+                android:text="المبيعات" />
+
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignOut"
+                style="@style/MaterialButtonStyle.Stroked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginTop="@dimen/_14sdp"
+
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:text="تسجيل الخروج" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/layout_ads" />
+
+    </LinearLayout>
+
+</RelativeLayout>

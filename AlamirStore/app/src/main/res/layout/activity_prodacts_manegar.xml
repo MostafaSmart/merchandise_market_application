@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layoutDirection="rtl"
+    android:layout_height="match_parent"
+    tools:context=".app.worker.activitys.ProdactsManegarActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/herder"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/toolbar_lay"
+
+            layout="@layout/tool_bar_no_round"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/search_contenrer"
+            android:padding="@dimen/spacing_standard"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+
+
+
+                app:startIconDrawable="@drawable/search_icon"
+
+
+                android:layout_marginStart="8dp"
+                android:id="@+id/liner_filter"
+
+
+                android:theme="@style/AppThemeMaterial"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+
+                android:layout_margin="@dimen/spacing_standard"
+
+                app:endIconTintMode="screen"
+
+                >
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/edtSerch"
+                    android:layout_width="match_parent"
+
+                    android:theme="@style/AppThemeMaterial"
+
+
+                    android:layout_height="wrap_content"
+
+                    android:inputType="text"
+
+
+
+
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_close_black"
+                android:layout_gravity="center"
+                android:id="@+id/close_serch"
+                android:layout_marginEnd="@dimen/spacing_standard"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+    <GridView
+        android:layout_below="@id/herder"
+        android:layout_width="match_parent"
+        android:padding="@dimen/spacing_standard"
+        android:numColumns="auto_fit"
+        android:id="@+id/gridProdact"
+        android:layout_height="match_parent">
+
+    </GridView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_margin="@dimen/spacing_standard_new"
+        android:src="@drawable/ic_add"
+        android:id="@+id/floatingAddProdacts"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content"
+        />
+
+</RelativeLayout>

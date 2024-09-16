@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/rlContent"
+    android:layoutDirection="rtl"
+    tools:context=".app.user.activitys.AccountActivity"
+    >
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:id="@+id/prog_acount"
+        android:layout_height="wrap_content">
+
+    </ProgressBar>
+
+    <include
+        android:id="@+id/toolbar_lay"
+        layout="@layout/toolbar" />
+    <include
+        android:id="@+id/toolbar_lay"
+        layout="@layout/toolbar_tow" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_lay"
+        android:clipToPadding="false"
+
+        android:overScrollMode="never"
+        android:paddingBottom="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:scaleType="centerCrop"
+
+                android:id="@+id/profile_image"
+                android:src="@drawable/ic_walk"
+                app:civ_border_color="@color/view_color"
+                app:civ_border_width="4dp"/>
+
+
+
+            <TextView
+                android:id="@+id/txtDisplayName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="الاسم الكامل"
+                android:fontFamily="@font/cairo"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/font_size_large" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginTop="@dimen/spacing_standard_new"
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:layout_marginBottom="@dimen/_14sdp"
+                android:background="@drawable/bg_ractangal_stroked"
+
+
+                android:id="@+id/R_EmailConfirm"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvVerifyHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/cairo"
+
+
+                    android:layout_marginTop="@dimen/spacing_middle"
+                    android:text="يرجى التحقق من بريدك الالكتروني"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:id="@+id/tvVerifySubHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvVerifyHeading"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="اخرى"
+
+                    android:fontFamily="@font/cairo"
+
+                    android:visibility="invisible"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/font_size_small" />
+
+                <Button
+                    android:id="@+id/btnConfimEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_ractangle_rounded_active"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:paddingStart="@dimen/spacing_middle"
+                    android:paddingEnd="@dimen/spacing_middle"
+                    android:text="التحقق"
+                    android:fontFamily="@font/cairo"
+
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_small" />
+
+<!--                <com.airbnb.lottie.LottieAnimationView-->
+<!--                    android:layout_width="@dimen/_30sdp"-->
+<!--                    android:layout_height="@dimen/_30sdp"-->
+<!--                    android:layout_alignParentEnd="true"-->
+<!--                    android:layout_marginTop="@dimen/spacing_control"-->
+<!--                    app:lottie_autoPlay="true"-->
+<!--                    app:lottie_fileName="lottie/blink_new.json"-->
+<!--                    app:lottie_loop="true" />-->
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@id/tvVerifySubHeading"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+
+                android:layout_marginTop="@dimen/spacing_standard_new"
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:id="@+id/phone_contenrer"
+
+                android:layout_marginBottom="@dimen/_14sdp"
+                android:background="@drawable/bg_ractangle_rounded_stroke">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/edtPhone"
+                    android:background="@null"
+
+                    android:paddingStart="@dimen/spacing_middle"
+                 android:hint="ادخل رقم الهاتف"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/font_size_small" />
+
+                <Button
+                    android:id="@+id/btnSavephone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_ractangle_rounded_active"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:paddingStart="@dimen/spacing_middle"
+                    android:paddingEnd="@dimen/spacing_middle"
+                    android:text="حفظ الرقم"
+                    android:fontFamily="@font/cairo"
+
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_small" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvAddressManager"
+                style="@style/AccountLabel"
+                android:text="البيانات " />
+            <TextView
+                android:id="@+id/tvOffer"
+                style="@style/AccountLabel"
+                android:text="الطلبات" />
+
+            <TextView
+                android:id="@+id/tvWorker"
+                style="@style/AccountLabel"
+                android:text="وضع البائع" />
+
+            <TextView
+                android:id="@+id/tvQuickPay"
+                style="@style/AccountLabel"
+                android:text="الاعدادات" />
+            <TextView
+                android:id="@+id/tvHelpCenter"
+                style="@style/AccountLabel"
+                android:text="مركز المساعدة" />
+
+
+
+            <TextView
+                android:id="@+id/tvWishlist"
+                style="@style/AccountLabel"
+                android:visibility="gone"
+                android:text="المبيعات" />
+
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignOut"
+                style="@style/MaterialButtonStyle.Stroked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginTop="@dimen/_14sdp"
+
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:text="تسجيل الخروج" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/banner_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include layout="@layout/layout_ads" />
+
+    </LinearLayout>
+
+</RelativeLayout>

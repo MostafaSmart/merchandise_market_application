@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layoutDirection="rtl"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.worker.activitys.WPActivity">
+
+
+
+    <include
+        android:id="@+id/toolbar_lay"
+        layout="@layout/toolbar" />
+    <include
+        android:id="@+id/toolbar_lay"
+
+        layout="@layout/tool_bar_no_round" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar_lay"
+       android:layout_centerHorizontal="true"
+
+
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/toolbar_lay22"
+
+                    android:padding="@dimen/spacing_standard"
+                    android:background="@drawable/top_background"
+
+                    android:orientation="vertical"
+                    android:layout_height="@dimen/_150sdp">
+
+                </LinearLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/card_info"
+                    android:layout_margin="@dimen/spacing_standard_new"
+                    android:orientation="vertical"
+
+
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/spacing_standard"
+                    tools:ignore="MissingPrefix ,UnusedAttribute"
+                    android:paddingBottom="5dp"
+                  android:layout_centerInParent="true"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:paddingTop="@dimen/spacing_standard"
+                            android:paddingStart="@dimen/spacing_large"
+                            android:paddingEnd="@dimen/spacing_large"
+                            android:paddingBottom="@dimen/spacing_standard"
+
+                            android:orientation="horizontal"
+                            android:id="@+id/per_info"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="@dimen/_70sdp"
+                                    android:layout_height="@dimen/_70sdp"
+
+                                    android:layout_margin="16dp"
+                                    android:scaleType="centerCrop"
+
+                                    android:layout_alignParentStart="true"
+
+                                    android:id="@+id/profile_image"
+                                    android:src="@drawable/ic_walk"
+                                    app:civ_border_color="@color/view_color"
+                                    app:civ_border_width="4dp"/>
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+
+                                android:orientation="vertical"
+
+
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+
+                                    android:id="@+id/txtUsername"
+                                    android:textSize="@dimen/font_size_medium"
+                                    android:text="محمد علي عبدة"
+                                    android:layout_marginTop="@dimen/spacing_large"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="center"
+
+                                    android:textColor="@color/black"
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:text="بائع"
+
+                                    android:id="@+id/txtWorkType"
+                                    android:textSize="@dimen/font_size_medium"
+
+                                    android:layout_gravity="center"
+
+
+
+                                    android:layout_height="wrap_content"/>
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:layout_width="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="متابعة"
+                                    android:id="@+id/btn_folow"
+                                    android:paddingTop="@dimen/_4sdp"
+                                    android:paddingBottom="@dimen/_4sdp"
+                                    android:layout_marginStart="@dimen/spacing_standard"
+                                    android:layout_marginEnd="@dimen/spacing_standard"
+                                    style="@style/MaterialButtonStyle.Stroked"
+                                    app:cornerRadius="@dimen/spacing_standard"
+                                    android:textSize="@dimen/font_size_small"
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_marginStart="@dimen/spacing_large"
+                            android:layout_below="@id/per_info"
+                            android:id="@+id/rit"
+                            android:layout_marginEnd="@dimen/spacing_large"
+
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:text="التقيمات"
+                                    android:layout_gravity="center"
+
+                                    android:layout_height="wrap_content"/>
+                                <RatingBar
+                                    android:id="@+id/ratingBar"
+                                    android:layout_width="wrap_content"
+
+                                    android:layout_gravity="center"
+                                    android:layout_height="wrap_content"
+                                    android:numStars="5"
+                                    style="?attr/ratingBarStyleSmall"
+                                    android:stepSize="1.0"
+                                    android:theme="@style/RatingBar" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:text="عدد التقييمات"
+                                    android:layout_gravity="center"
+
+                                    android:layout_height="wrap_content"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:text="455"
+                                    android:id="@+id/txtFolowrs"
+                                    android:textStyle="bold"
+                                    android:layout_gravity="center"
+
+                                    android:layout_height="wrap_content"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_below="@+id/rit"
+                            android:layout_margin="@dimen/spacing_standard"
+                            android:id="@+id/txtDescripe"
+                            android:text=" حالة كيف يكون العمل بدون العمل حالة كيف يكون العمل بدون العمل حالة كيف يكون العمل بدون العمل حالة كيف يكون العمل بدون العمل"
+                            android:layout_height="wrap_content"/>
+
+
+                    </RelativeLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tap_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/MyTabLayout"
+                    />
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</RelativeLayout>

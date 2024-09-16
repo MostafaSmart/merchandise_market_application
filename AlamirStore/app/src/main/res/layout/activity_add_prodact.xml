@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layoutDirection="rtl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.worker.activitys.AddProdactActivity">
+
+
+    <include
+        android:id="@+id/toolbar_lay"
+        layout="@layout/tool_bar_no_round"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar_lay"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/toolbar_lay22"
+
+
+                android:padding="@dimen/spacing_standard"
+                android:background="@drawable/top_background"
+
+                android:orientation="vertical"
+                android:layout_height="@dimen/_150sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="تعليمات هامه:"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_normal"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/spacing_standard"
+                android:layout_marginTop="@dimen/spacing_xxlarge"
+                android:layout_marginEnd="@dimen/spacing_standard"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+
+
+
+                    android:text="اسم المنتج /عنوان المنتج"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    android:id="@+id/edtName"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_standard"
+
+
+                    android:hint="اسم المنتج"
+                    android:autofillHints="لمنتج"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    />
+
+                <EditText
+                    android:id="@+id/edtDeicrip"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_standard"
+
+
+                    android:hint="وصف المنتج"
+                    android:autofillHints="وصف"
+
+
+                    android:inputType="textMultiLine"
+
+                    android:singleLine="false"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="القسم الرئيسي"
+                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:id="@+id/listMainSection"
+                android:layout_margin="@dimen/spacing_standard"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.chip.ChipGroup>
+
+
+            <View
+                android:background="@color/colorPrimary"
+                android:layout_marginStart="@dimen/spacing_standard_new"
+                android:layout_marginEnd="@dimen/spacing_standard_new"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/lilSubSection"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="القسم الفرعي"
+                    android:layout_marginTop="@dimen/spacing_xlarge"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_height="wrap_content"/>
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:id="@+id/listSubSection"
+                    android:layout_margin="@dimen/spacing_standard"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.chip.ChipGroup>
+
+
+                <View
+                    android:background="@color/colorPrimary"
+                    android:layout_marginStart="@dimen/spacing_standard_new"
+                    android:layout_marginEnd="@dimen/spacing_standard_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/spacing_standard"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:text="اضافة صور"
+                        android:textSize="@dimen/font_size_small"
+                        android:id="@+id/btnAddImages"
+                        style="@style/MaterialButtonStyle.StrokedRed"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+
+                        android:text="اضافة مقاسات"
+                        android:textSize="@dimen/font_size_small"
+                        android:id="@+id/btnAddSizes"
+                        style="@style/MaterialButtonStyle.Stroked"
+                        android:layout_height="wrap_content"/>
+
+
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/font_size_small"
+
+                        android:text="اضافة اللوان"
+                        android:id="@+id/btnAddColors"
+                        style="@style/MaterialButtonStyle.StrokedRed"
+                        android:layout_height="wrap_content"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+
+                        android:text="اضافة تخفيض"
+                        android:textSize="@dimen/font_size_small"
+                        android:id="@+id/btnAddDiscount"
+                        style="@style/MaterialButtonStyle.Stroked"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/spacing_standard"
+                    android:layout_marginEnd="@dimen/spacing_standard"
+                    android:background="@drawable/items_background1"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:text="صور"
+                        android:id="@+id/cbImages"
+                        android:enabled="false"
+                        android:layout_height="wrap_content"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:text="مقاسات \ اسعار"
+                        android:id="@+id/cbSizes"
+                        android:enabled="false"
+                        android:layout_height="wrap_content"/>
+
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:text="اللوان"
+                        android:id="@+id/cbColors"
+                        android:enabled="false"
+                        android:layout_height="wrap_content"/>
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:text="تخفيض"
+                        android:id="@+id/cbDiscount"
+                        android:enabled="false"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:text="استعراض قبل النشر"
+                android:id="@+id/btnShowSummary"
+                android:layout_margin="@dimen/spacing_standard_new"
+                style="@style/MaterialButtonStyle.Filled"
+                android:layout_height="wrap_content"/>
+
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                android:id="@+id/prog_add"
+                android:layout_height="wrap_content">
+
+            </ProgressBar>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:text="نشر"
+                android:id="@+id/btnUplaudProdact"
+                android:layout_margin="@dimen/spacing_standard_new"
+                style="@style/MaterialButtonStyle.Filled"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

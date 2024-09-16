@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layoutDirection="rtl"
+    android:padding="@dimen/spacing_standard_new"
+    android:background="@drawable/dialog_background3"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+           android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+              android:visibility="gone"
+                android:id="@+id/lilSizePrice"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/toolbar_lay22"
+
+                    android:padding="@dimen/spacing_standard"
+                    android:background="@drawable/top_background"
+
+                    android:orientation="vertical"
+                    android:layout_height="@dimen/_100sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="تعليمات هامه"
+                        android:textSize="@dimen/font_size_normal"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_standard"
+                    android:text="سعر واحد لكل المقاسات"
+                    android:id="@+id/chOnePrice"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/edtSizes"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_standard"
+
+
+                    android:hint="ادخل المقاس"
+                    android:autofillHints="المقاس"
+
+
+                    android:inputType="textMultiLine"
+
+                    android:singleLine="false"
+                    />
+                <EditText
+                    android:id="@+id/edtPrice"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_standard"
+
+
+                    android:hint="السعر"
+                    android:autofillHints="السعر"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:text="حفظ"
+                    android:layout_gravity="center"
+                    android:id="@+id/btnSaveSizePrice"
+                    android:layout_marginTop="@dimen/spacing_standard"
+                    style="@style/MaterialButtonStyle.Stroked"
+                    android:layout_height="wrap_content"/>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:enabled="false"
+                    android:layout_marginTop="@dimen/spacing_standard"
+                    android:id="@+id/edtSummarySize"
+                    android:layout_height="wrap_content"/>
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:text="اكمال "
+                    android:layout_marginTop="@dimen/_100sdp"
+                    style="@style/MaterialButtonStyle.Filled"
+                    android:id="@+id/btnFinshSizePrice"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/lilColors"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/toolbar_lay23"
+
+                    android:padding="@dimen/spacing_standard"
+                    android:background="@drawable/top_background"
+
+                    android:orientation="vertical"
+                    android:layout_height="@dimen/_100sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="تعليمات هامه"
+                        android:textSize="@dimen/font_size_normal"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+
+
+                <EditText
+                    android:id="@+id/edtColors"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_standard"
+
+
+                    android:hint="ادخل الالوان تحت بعضها"
+                    android:autofillHints="الالوان"
+
+
+                    android:inputType="textMultiLine"
+
+                    android:singleLine="false"
+                    />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:text="حفظ"
+                    android:layout_gravity="center"
+                    android:id="@+id/btnSaveColor"
+                    android:layout_marginTop="@dimen/spacing_standard"
+                    style="@style/MaterialButtonStyle.Stroked"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:enabled="false"
+                    android:layout_marginTop="@dimen/spacing_standard"
+                    android:id="@+id/edtSummaryColors"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:text="اكمال "
+
+                    android:layout_marginTop="@dimen/_100sdp"
+                    style="@style/MaterialButtonStyle.Filled"
+                    android:id="@+id/btnFinshColors"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+
+                android:id="@+id/lilSizeDiscount"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/toolbar_lay223"
+
+                    android:padding="@dimen/spacing_standard"
+                    android:background="@drawable/top_background"
+
+                    android:orientation="vertical"
+                    android:layout_height="@dimen/_100sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="تعليمات هامه"
+                        android:textSize="@dimen/font_size_normal"
+                        android:textColor="@color/white"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_standard"
+                    android:text="سعر واحد لكل المقاسات"
+                    android:id="@+id/chOneDiscount"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:id="@+id/edtSizesDiscount"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/spacing_standard"
+
+
+                    android:hint="ادخل المقاس"
+                    android:autofillHints="المقاس"
+
+
+                    android:inputType="textMultiLine"
+
+                    android:singleLine="false"
+                    />
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:id="@+id/chSizesDiscount"
+                    android:layout_height="wrap_content">
+
+                </com.google.android.material.chip.ChipGroup>
+                <EditText
+                    android:id="@+id/edtPriceDiscount"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_standard"
+
+
+                    android:hint="السعر بعد التخفيض"
+                    android:autofillHints="السعر"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:text="حفظ"
+                    android:layout_gravity="center"
+                    android:id="@+id/btnSaveSizeDiscount"
+                    android:layout_marginTop="@dimen/spacing_standard"
+                    style="@style/MaterialButtonStyle.Stroked"
+                    android:layout_height="wrap_content"/>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:enabled="false"
+                    android:layout_marginTop="@dimen/spacing_standard"
+                    android:id="@+id/edtSummarySizeDiscount"
+                    android:layout_height="wrap_content"/>
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:text="اكمال "
+                    android:layout_marginTop="@dimen/_100sdp"
+                    style="@style/MaterialButtonStyle.Filled"
+                    android:id="@+id/btnFinshSizeDiscount"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
